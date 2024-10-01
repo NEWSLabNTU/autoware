@@ -76,18 +76,6 @@
 [submodule "src/autoware/middleware/external/heaphook"]
 	path = src/autoware/middleware/external/heaphook
 	url = https://github.com/tier4/heaphook.git
-[submodule "src/gps_umd"]
-	path = src/gps_umd
-	url = https://github.com/NEWSLabNTU/gps_umd.git
-[submodule "src/gnss_locator"]
-	path = src/gnss_locator
-	url = https://github.com/NEWSLabNTU/gnss_locator.git
-[submodule "src/zed-ros2-examples"]
-	path = src/zed-ros2-examples
-	url = git@github.com:NEWSLabNTU/F1EIGHT-zed-ros2-examples.git
-[submodule "src/zed-ros2-wrapper"]
-	path = src/zed-ros2-wrapper
-	url = git@github.com:NEWSLabNTU/F1EIGHT_zed-ros2-wrapper.git
 [submodule "src/autoware/calibration_tools"]
 	path = src/autoware/calibration_tools
 	url = git@github.com:NEWSLabNTU/F1EIGHT_CalibrationTools.git
@@ -110,6 +98,3 @@
 [submodule "src/vendor/lidartag_msgs"]
 	path = src/vendor/lidartag_msgs
 	url = https://github.com/tier4/LiDARTag_msgs.git
-[submodule "src/Xsens_MTi_ROS_Driver_and_Ntrip_Client"]
-	path = src/Xsens_MTi_ROS_Driver_and_Ntrip_Client
-	url = https://github.com/xsenssupport/Xsens_MTi_ROS_Driver_and_Ntrip_Client.git
