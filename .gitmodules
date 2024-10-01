@@ -98,3 +98,6 @@
 [submodule "src/vendor/lidartag_msgs"]
 	path = src/vendor/lidartag_msgs
 	url = https://github.com/tier4/LiDARTag_msgs.git
+[submodule "src/autoware/sensor_component/external/lucid_vision_driver"]
+	path = src/autoware/sensor_component/external/lucid_vision_driver
+	url = https://github.com/autowarefoundation/lucid_vision_driver.git
