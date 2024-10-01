@@ -101,3 +101,6 @@
 [submodule "src/autoware/sensor_component/external/lucid_vision_driver"]
 	path = src/autoware/sensor_component/external/lucid_vision_driver
 	url = https://github.com/NEWSLabNTU/lucid_vision_driver.git
+[submodule "src/autoware/sensor_component/external/ros2_socketcan"]
+	path = src/autoware/sensor_component/external/ros2_socketcan
+	url = https://github.com/autowarefoundation/ros2_socketcan.git
