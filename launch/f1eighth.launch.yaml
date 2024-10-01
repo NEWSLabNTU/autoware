@@ -13,10 +13,13 @@ launch:
       value: ./data/COSS-map-planning
     -
       name: launch_localization
-      value: "true"
+      value: "false"
     -
       name: pose_source
       value: "eagleye"
+    -
+      name: launch_map
+      value: "false"
 
 # - node:
 #     pkg: "tf2_ros"
