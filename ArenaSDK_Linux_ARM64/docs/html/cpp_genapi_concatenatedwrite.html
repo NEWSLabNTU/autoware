@@ -1,0 +1,449 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>ConcatenatedWrite &mdash; Arena 0.1.73.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="Arena 0.1.73.0 documentation" href="index.html"/>
+        <link rel="up" title="GenApi C++" href="cpp_genapi.html"/>
+        <link rel="next" title="IEnumeration" href="cpp_genapi_ienumeration.html"/>
+        <link rel="prev" title="IChunkPort" href="cpp_genapi_ichunkport.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home">
+          
+
+          <!--
+            
+            <img src="_static/lucid-white.png" class="logo" />
+          -->
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.73
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="welcome.html">Welcome</a></li>
+<li class="toctree-l1"><a class="reference internal" href="windows_setup.html">Installation &amp; Configuration: Windows</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk_linux.html">Installation &amp; Configuration: Linux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="performance.html">Optimizing System Performance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting_started_arenaview_windows.html">Using ArenaView</a></li>
+<li class="toctree-l1"><a class="reference internal" href="jupyter_guide.html">Using ArenaView with Jupyter Notebooks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_sdk.html">Arena SDK Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="arena_api.html">Arena Python API</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="sdk.html">Code Reference &amp; Samples</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gentl.html">GenTL Features</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="cpp.html">Arena C++</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="cpp_arena.html">Arena C++</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="cpp_genapi.html">GenApi C++</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemap.html">INodeMap</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ibase.html">IBase</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportstacked.html">IPortStacked</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iinteger.html">IInteger</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iboolean.html">IBoolean</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapref.html">NodeMapRef</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumentry.html">IEnumEntry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ichunkport.html">IChunkPort</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">ConcatenatedWrite</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumeration.html">IEnumeration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ifloat.html">IFloat</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inode.html">INode</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iregister.html">IRegister</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icommand.html">ICommand</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iportrecorder.html">IPortRecorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ivalue.html">IValue</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_iport.html">IPort</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_portwritelist.html">PortWriteList</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_istring.html">IString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_icategory.html">ICategory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_ienumerationt.html">IEnumerationT</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_nodemapfactory.html">NodeMapFactory</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cpp_genapi_inodemapdyn.html">INodeMapDyn</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_save.html">Save C++</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cpp_examples.html">C++ Code Samples</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="c.html">Arena C</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qt.html">Qt</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="contact_us.html">Contact Us</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Arena</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="sdk.html">Code Reference &amp; Samples</a> &raquo;</li>
+        
+          <li><a href="cpp.html">Arena C++</a> &raquo;</li>
+        
+          <li><a href="cpp_genapi.html">GenApi C++</a> &raquo;</li>
+        
+      <li>ConcatenatedWrite</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="concatenatedwrite">
+<h1>ConcatenatedWrite<a class="headerlink" href="#concatenatedwrite" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<p>This file contains the public definition of the node write concatenator classes. </p>
+<dl class="type">
+<dt id="_CPPv216GENAPI_NAMESPACE">
+<span id="GENAPI_NAMESPACE"></span><span class="target" id="project0namespace_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e"></span><em class="property">namespace </em></dt>
+<dd><dl class="class">
+<dt id="_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenatorE">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenator"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator"></span><em class="property">class </em></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenator3AddERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenator::Add__GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringCR"></span>virtual <span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_1afd3a48b81c7afe960ee45275a23cfe52"></span>void <code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenator::</code><code class="descname">Add</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>nodeName</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>nodeValue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenator3AddERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /> = 0</dt>
+<dd><p>Add a write with value of type gcstring. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenator3AddERKN17GENICAM_NAMESPACE8gcstringEPKc">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenator::Add__GENICAM_NAMESPACE::gcstringCR.cCP"></span>virtual <span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_1ab15b59908b7a329eab194062d20295dc"></span>void <code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenator::</code><code class="descname">Add</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>nodeName</em>, <em class="property">const</em> char *<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenator3AddERKN17GENICAM_NAMESPACE8gcstringEPKc" title="Permalink to this definition">¶</a><br /> = 0</dt>
+<dd><p>Add a write with value of type char *. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenator3AddERKN17GENICAM_NAMESPACE8gcstringEK7int64_t">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenator::Add__GENICAM_NAMESPACE::gcstringCR.int64_tC"></span>virtual <span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_1ae65966cb1a95f60a07704ccd75d22095"></span>void <code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenator::</code><code class="descname">Add</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>nodeName</em>, <em class="property">const</em> int64_t <em>nodeValue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenator3AddERKN17GENICAM_NAMESPACE8gcstringEK7int64_t" title="Permalink to this definition">¶</a><br /> = 0</dt>
+<dd><p>Add a write with value of type int64_t. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenator3AddERKN17GENICAM_NAMESPACE8gcstringEKd">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenator::Add__GENICAM_NAMESPACE::gcstringCR.doubleC"></span>virtual <span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_1ae6adecf510076ba869ba6e40dc5b543a"></span>void <code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenator::</code><code class="descname">Add</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>nodeName</em>, <em class="property">const</em> double <em>nodeValue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenator3AddERKN17GENICAM_NAMESPACE8gcstringEKd" title="Permalink to this definition">¶</a><br /> = 0</dt>
+<dd><p>Add a write with value of type double. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenator3AddERKN17GENICAM_NAMESPACE8gcstringEKb">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenator::Add__GENICAM_NAMESPACE::gcstringCR.bC"></span>virtual <span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_1a22fc108632fa33ab660cca326e8e962c"></span>void <code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenator::</code><code class="descname">Add</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>nodeName</em>, <em class="property">const</em> bool <em>nodeValue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenator3AddERKN17GENICAM_NAMESPACE8gcstringEKb" title="Permalink to this definition">¶</a><br /> = 0</dt>
+<dd><p>Add a write with value of type bool. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenator5ClearEv">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenator::Clear"></span>virtual <span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_1a2a31621e7299677b3161ce26cb3907b2"></span>void <code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenator::</code><code class="descname">Clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenator5ClearEv" title="Permalink to this definition">¶</a><br /> = 0</dt>
+<dd><p>Remove all write from the container. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenator7DestroyEv">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenator::Destroy"></span>virtual <span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_1a8142fa85bb6f93aaeb1b7a2634f273c3"></span>void <code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenator::</code><code class="descname">Destroy</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenator7DestroyEv" title="Permalink to this definition">¶</a><br /> = 0</dt>
+<dd><p>//! Destroys this container </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Protected Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenatorD0Ev">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenator::~CNodeWriteConcatenator__void"></span>virtual <span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_1a18fc0d204b7fcece61c3c566391cbd97"></span><code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenator::</code><code class="descname">~CNodeWriteConcatenator</code><span class="sig-paren">(</span>void<span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenatorD0Ev" title="Permalink to this definition">¶</a><br /> = 0</dt>
+<dd><p>Destructor (Prevent freeing the object, need to call Destroy) </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRefE">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref"></span><em class="property">class </em></dt>
+<dd><em>#include &lt;ConcatenatedWrite.h&gt;</em><p>Reference object for <a class="reference internal" href="#project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator"><span class="std std-ref">CNodeWriteConcatenator</span></a> create with NewNodeWriteConcatenator function of nodemap objects. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef25CNodeWriteConcatenatorRefEv">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::CNodeWriteConcatenatorRef"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref_1ab5ab5f4f515da030ef727113108d79cc"></span><code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::</code><code class="descname">CNodeWriteConcatenatorRef</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef25CNodeWriteConcatenatorRefEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef25CNodeWriteConcatenatorRefEP22CNodeWriteConcatenator">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::CNodeWriteConcatenatorRef__CNodeWriteConcatenatorP"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref_1a77c1c2f279d1c31e629f4938f742e6f2"></span><code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::</code><code class="descname">CNodeWriteConcatenatorRef</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenatorE" title="GENAPI_NAMESPACE::CNodeWriteConcatenator">CNodeWriteConcatenator</a> *<em>pConcatenator</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef25CNodeWriteConcatenatorRefEP22CNodeWriteConcatenator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRefD0Ev">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::~CNodeWriteConcatenatorRef"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref_1a1dc1c9a6d61b3e65d5771910c91096d0"></span><code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::</code><code class="descname">~CNodeWriteConcatenatorRef</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRefD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef4_AddERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringE">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::_Add__GENICAM_NAMESPACE::gcstringCR.GENICAM_NAMESPACE::gcstringCR"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref_1a76b367e0a51c270dcd7c33da195ce74a"></span>void <code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::</code><code class="descname">_Add</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>nodeName</em>, <em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>nodeValue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef4_AddERKN17GENICAM_NAMESPACE8gcstringERKN17GENICAM_NAMESPACE8gcstringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add a write with value of type gcstring. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef4_AddERKN17GENICAM_NAMESPACE8gcstringEPKc">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::_Add__GENICAM_NAMESPACE::gcstringCR.cCP"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref_1a5dac2e6898eee5f861f37bd71c4e1ff6"></span>void <code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::</code><code class="descname">_Add</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>nodeName</em>, <em class="property">const</em> char *<em>nodeValue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef4_AddERKN17GENICAM_NAMESPACE8gcstringEPKc" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add a write with value of type char *. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef4_AddERKN17GENICAM_NAMESPACE8gcstringEK7int64_t">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::_Add__GENICAM_NAMESPACE::gcstringCR.int64_tC"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref_1ab394e0157e8f76ff7947a250f2cbec36"></span>void <code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::</code><code class="descname">_Add</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>nodeName</em>, <em class="property">const</em> int64_t <em>nodeValue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef4_AddERKN17GENICAM_NAMESPACE8gcstringEK7int64_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add a write with value of type int64_t. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef4_AddERKN17GENICAM_NAMESPACE8gcstringEKd">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::_Add__GENICAM_NAMESPACE::gcstringCR.doubleC"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref_1a51ddb71cbecf1231c82fd0f6f5873193"></span>void <code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::</code><code class="descname">_Add</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>nodeName</em>, <em class="property">const</em> double <em>nodeValue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef4_AddERKN17GENICAM_NAMESPACE8gcstringEKd" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add a write with value of type double. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef4_AddERKN17GENICAM_NAMESPACE8gcstringEKb">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::_Add__GENICAM_NAMESPACE::gcstringCR.bC"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref_1af05239281f20db681a2eeecc7eca01e0"></span>void <code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::</code><code class="descname">_Add</code><span class="sig-paren">(</span><em class="property">const</em> GENICAM_NAMESPACE::gcstring &amp;<em>nodeName</em>, <em class="property">const</em> bool <em>nodeValue</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef4_AddERKN17GENICAM_NAMESPACE8gcstringEKb" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Add a write with value of type bool. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef6_ClearEv">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::_Clear"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref_1a49a317d2313a43e68c790120d905430d"></span>void <code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::</code><code class="descname">_Clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef6_ClearEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Remove all write from the container. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef7ReleaseEv">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::Release"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref_1a47428b2bc6b84ed345d61327877d7891"></span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenatorE" title="GENAPI_NAMESPACE::CNodeWriteConcatenator">CNodeWriteConcatenator</a> *<code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::</code><code class="descname">Release</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef7ReleaseEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Release owenership of the write concatenator object. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRefcvP22CNodeWriteConcatenatorEv">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::castto-CNodeWriteConcatenatorP-operator"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref_1a251fe3a9421fabe0fbb98159e05f2d04"></span><code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::</code><code class="descname">operator CNodeWriteConcatenator *</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRefcvP22CNodeWriteConcatenatorEv" title="Permalink to this definition">¶</a><br /> const</dt>
+<dd><p>Provide access to the object owned by *this. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef3getEv">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::get"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref_1abf429f3ad2380561479c3c039312140e"></span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenatorE" title="GENAPI_NAMESPACE::CNodeWriteConcatenator">CNodeWriteConcatenator</a> *<code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::</code><code class="descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef3getEv" title="Permalink to this definition">¶</a><br /> const</dt>
+<dd><p>Returns a pointer tthe object owned by *this or nullptr if no object is owned. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRefaSEP22CNodeWriteConcatenator">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::assign-operator__CNodeWriteConcatenatorP"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref_1a3b0756a86b1064b1d5be21e06cdd215a"></span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRefE" title="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef">CNodeWriteConcatenatorRef</a> &amp;<code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::</code><code class="descname">operator=</code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenatorE" title="GENAPI_NAMESPACE::CNodeWriteConcatenator">CNodeWriteConcatenator</a> *<em>pConcatenator</em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRefaSEP22CNodeWriteConcatenator" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Take ownership of a new object. Release the currently owned object if any. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Private Members</p>
+<dl class="member">
+<dt id="_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef15m_pConcatenatorE">
+<span id="GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::m_pConcatenator__CNodeWriteConcatenatorP"></span><span class="target" id="project0class_g_e_n_a_p_i___n_a_m_e_s_p_a_c_e_1_1_c_node_write_concatenator_ref_1a6287ebde10afe7404e419ecaf80d0ab8"></span><a class="reference internal" href="#_CPPv2N16GENAPI_NAMESPACE22CNodeWriteConcatenatorE" title="GENAPI_NAMESPACE::CNodeWriteConcatenator">CNodeWriteConcatenator</a> *<code class="descclassname">GENAPI_NAMESPACE::CNodeWriteConcatenatorRef::</code><code class="descname">m_pConcatenator</code><a class="headerlink" href="#_CPPv2N16GENAPI_NAMESPACE25CNodeWriteConcatenatorRef15m_pConcatenatorE" title="Permalink to this definition">¶</a><br /></dt>
+<dd></dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="cpp_genapi_ienumeration.html" class="btn btn-neutral float-right" title="IEnumeration" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="cpp_genapi_ichunkport.html" class="btn btn-neutral" title="IChunkPort" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2024 LUCID Vision Labs, Inc.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.73.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
