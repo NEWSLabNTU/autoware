@@ -15,8 +15,8 @@ modprobe can_raw
 modprobe can
 modprobe mttcan
 
-ip link set can0 up type can bitrate 500000 sample-point 0.825 restart-ms 50
+ip link set can0 type can bitrate 500000 sample-point 0.825 restart-ms 50
 ip link set up can0
 
-ip link set can1 up type can bitrate 500000 dbitrate 2000000 berr-reporting on fd on
+ip link set can1 type can bitrate 500000 dbitrate 2000000 berr-reporting on fd on
 ip link set up can1
