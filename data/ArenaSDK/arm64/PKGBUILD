@@ -1,0 +1,25 @@
+# Maintainer: Lin, Hsiang-Jui <jerry73204@gmail.com>
+pkgname=arena-sdk
+pkgver=0.1.73
+pkgrel=1
+pkgdesc='Arena SDK for LUCID cameras'
+arch=(arm64)
+depends=(libibverbs1 librdmacm1)
+license=()
+url='https://thinklucid.com/arena-software-development-kit/'
+
+source=(
+    "ArenaSDK_v${pkgver}_Linux_ARM64.tar.gz"
+    Arena_SDK.conf
+)
+sha256sums=(
+    e97a0e80d9a81d71a59f4fdb041f042be0eb3d5ae158768703af47b2e827a1cc
+    b96f9eb0b6d1e84c09fa00b12cf886022df111fac4976a7b0493fae5e379eec3
+)
+
+package() {
+    install -dm755 "$pkgdir/opt"
+    cp -r "$srcdir/ArenaSDK_Linux_ARM64" "$pkgdir/opt/ArenaSDK"
+    install -Dm644 "$srcdir/README_ARM64" "$pkgdir/opt/ArenaSDK/README"
+    install -Dm644 "$srcdir/Arena_SDK.conf" "$pkgdir/etc/ld.so.conf.d/Arena_SDK.conf"
+}
