@@ -12,6 +12,9 @@ launch:
       name: map_path
       value: ./data/COSS-map-planning
     -
+      name: data_path
+      value: ./data/artifacts
+    -
       name: launch_localization
       value: "false"
     -
