@@ -23,3 +23,6 @@ launch:
     -
       name: launch_map
       value: "false"
+    -
+      name: use_traffic_light_recognition
+      value: "false"
