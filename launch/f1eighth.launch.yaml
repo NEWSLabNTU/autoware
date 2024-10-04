@@ -26,3 +26,9 @@ launch:
     -
       name: use_traffic_light_recognition
       value: "false"
+    -
+      name: launch_perception
+      value: "false"
+    -
+      name: launch_planning
+      value: "false"
