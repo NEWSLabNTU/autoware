@@ -1,5 +1,6 @@
 import rclpy
 from rclpy.node import Node
+from rclpy.qos import QoSProfile, QoSReliabilityPolicy
 from ament_index_python.packages import get_package_share_directory
 import yaml
 from sensor_msgs.msg import CameraInfo, Image
@@ -41,7 +42,7 @@ class CameraInfoPublisher(Node):
 
         # Get parameters
         yaml_fname =  get_package_share_directory('calibrated_camera_publisher')+'/config/rgb_raw_info.yaml'
-        image_topic = '/camera/zedxm/zed_node/rgb_raw/image_raw_color'
+        image_topic = '/lucid_vision/camera_1/image'
 
         # Parse yaml file
         self.camera_info_msg = yaml_to_CameraInfo(yaml_fname)
@@ -51,12 +52,16 @@ class CameraInfoPublisher(Node):
         self.info_publisher = self.create_publisher(CameraInfo, 'camera_info', 10)
         self.image_publisher = self.create_publisher(Image, 'image', 10)
 
+        qos = QoSProfile(
+            depth=20,
+            reliability=QoSReliabilityPolicy.BEST_EFFORT)
+
         # Create subscriber with the provided topic
         self.subscription = self.create_subscription(
             Image,
             image_topic,
             self.image_cb,
-            20
+            qos,
         )
 
     def image_cb(self, msg):
