@@ -1,0 +1,55 @@
+launch:
+- include:
+    file: "$(find-pkg-share autoware_launch)/launch/autoware.launch.xml"
+    arg:
+    -
+      name: vehicle_model
+      value: sample_vehicle
+    -
+      name: sensor_model
+      value: sample_sensor_kit
+    -
+      name: map_path
+      value: ./data/COSS-map-planning
+    -
+      name: data_path
+      value: ./data/artifacts
+    -
+      name: launch_localization
+      value: "false"
+    -
+      name: pose_source
+      value: "eagleye"
+    -
+      name: launch_map
+      value: "false"
+    -
+      name: use_traffic_light_recognition
+      value: "false"
+    -
+      name: launch_perception
+      value: "false"
+    -
+      name: launch_planning
+      value: "false"
+    -
+      name: launch_vehicle
+      value: "true"
+    -
+      name: launch_system
+      value: "false"
+    -
+      name: launch_sensing
+      value: "true"
+    -
+      name: launch_control
+      value: "false"
+    -
+      name: launch_vehicle_interface
+      value: "false"
+    -
+      name: launch_system_monitor
+      value: "false"
+    -
+      name: rviz
+      value: "false"
