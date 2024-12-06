@@ -104,3 +104,6 @@
 [submodule "src/autoware/sensor_component/external/ros2_socketcan"]
 	path = src/autoware/sensor_component/external/ros2_socketcan
 	url = https://github.com/autowarefoundation/ros2_socketcan.git
+[submodule "src/autoware/sensor_component/external/HesaiLidar_ROS_2.0"]
+	path = src/autoware/sensor_component/external/HesaiLidar_ROS_2.0
+	url = https://github.com/HesaiTechnology/HesaiLidar_ROS_2.0.git
