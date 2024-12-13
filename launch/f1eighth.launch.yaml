@@ -15,20 +15,41 @@ launch:
       name: data_path
       value: ./data/artifacts
     -
-      name: launch_localization
-      value: "false"
-    -
-      name: pose_source
-      value: "eagleye"
-    -
-      name: launch_map
-      value: "false"
-    -
       name: use_traffic_light_recognition
       value: "false"
+    -
+      name: launch_vehicle
+      value: "true"
+    -
+      name: launch_system
+      value: "true"
+    -
+      name: launch_map
+      value: "true"
+    -
+      name: launch_sensing
+      value: "true"
+    -
+      name: launch_sensing_driver
+      value: "true"
+    -
+      name: launch_localization
+      value: "true"
     -
       name: launch_perception
       value: "false"
     -
       name: launch_planning
+      value: "true"
+    -
+      name: launch_control
+      value: "true"
+    -
+      name: use_sim_time
       value: "false"
+    -
+      name: pose_source
+      value: eagleye
+    -
+      name: twist_source
+      value: eagleye
