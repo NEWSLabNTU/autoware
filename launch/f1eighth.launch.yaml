@@ -18,6 +18,9 @@ launch:
       name: use_traffic_light_recognition
       value: "false"
     -
+      name: use_sim_time
+      value: "false"
+    -
       name: launch_vehicle
       value: "true"
     -
@@ -45,8 +48,8 @@ launch:
       name: launch_control
       value: "true"
     -
-      name: use_sim_time
-      value: "false"
+      name: launch_sensing_driver
+      value: "true"
     -
       name: pose_source
       value: eagleye
