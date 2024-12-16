@@ -4,7 +4,7 @@ launch:
     arg:
     -
       name: vehicle_model
-      value: g31_vehicle
+      value: bus_vehicle
     -
       name: sensor_model
       value: sample_sensor_kit
