@@ -5,12 +5,13 @@ launch:
     -
       name: vehicle_model
       value: bus_vehicle
+        # value: sample_vehicle
     -
       name: sensor_model
       value: sample_sensor_kit
     -
       name: map_path
-      value: ./data/COSS-map-planning
+      value: ./data/map
     -
       name: data_path
       value: ./data/artifacts
@@ -19,6 +20,9 @@ launch:
       value: "false"
     -
       name: use_sim_time
+      value: "false"
+    -
+      name: stop_check_enabled
       value: "false"
     -
       name: launch_vehicle
@@ -52,7 +56,10 @@ launch:
       value: "true"
     -
       name: pose_source
-      value: eagleye
+      value: ndt
     -
       name: twist_source
-      value: eagleye
+      value: gyro_odom
+    -
+      name: lidar_container_name
+      value: /pointcloud_container
