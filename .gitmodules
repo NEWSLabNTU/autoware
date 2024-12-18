@@ -107,9 +107,6 @@
 [submodule "src/autoware/sensor_component/external/HesaiLidar_ROS_2.0"]
 	path = src/autoware/sensor_component/external/HesaiLidar_ROS_2.0
 	url = https://github.com/HesaiTechnology/HesaiLidar_ROS_2.0.git
-[submodule "src/autoware/sensor_kit/external/hesai_description"]
-	path = src/autoware/sensor_kit/external/hesai_description
-	url = https://github.com/ori-drs/hesai_description.git
 [submodule "src/autoware/universe/external/nmea_ros_bridge"]
 	path = src/autoware/universe/external/nmea_ros_bridge
 	url = https://github.com/MapIV/nmea_ros_bridge.git
