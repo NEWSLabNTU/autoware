@@ -28,6 +28,12 @@ launch:
       name: launch_vehicle
       value: "true"
     -
+      name: launch_system_monitor
+      value: "false"
+    -
+      name: launch_dummy_diag_publisher
+      value: "false"
+    -
       name: launch_system
       value: "true"
     -
@@ -44,7 +50,7 @@ launch:
       value: "true"
     -
       name: launch_perception
-      value: "false"
+      value: "true"
     -
       name: launch_planning
       value: "true"
@@ -54,6 +60,15 @@ launch:
     -
       name: launch_sensing_driver
       value: "true"
+    -
+      name: launch_dummy_perception
+      value: "false"
+    -
+      name: use_traffic_light_recognition
+      value: "false"
+    -
+      name: emergency_hazard_level
+      value: "4"
     -
       name: pose_source
       value: ndt
