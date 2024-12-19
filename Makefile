@@ -27,8 +27,8 @@ build:
 		--cmake-args -DCMAKE_BUILD_TYPE=Release
 
 launch:
-	echo "please run canbus setup and ptp4l"
-	sleep 1
+	@echo "### Please run canbus setup and ptp4l ###"
+	@sleep 3
 	source install/setup.bash && \
 	ros2 launch launch/f1eighth.launch.yaml
 
