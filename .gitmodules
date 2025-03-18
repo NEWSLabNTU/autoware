@@ -97,3 +97,6 @@
 [submodule "src/vehicle/sample_vehicle_launch"]
 	path = src/vehicle/sample_vehicle_launch
 	url = https://github.com/autowarefoundation/sample_vehicle_launch.git
+[submodule "src/tools"]
+	path = src/tools
+	url = https://github.com/autowarefoundation/autoware_tools.git
