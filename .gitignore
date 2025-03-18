@@ -26,3 +26,6 @@ capture/
 
 # Node.js
 node_modules/
+
+# Ignore debian packages
+/release_deb/
