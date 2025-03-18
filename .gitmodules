@@ -100,3 +100,6 @@
 [submodule "src/tools"]
 	path = src/tools
 	url = https://github.com/autowarefoundation/autoware_tools.git
+[submodule "src/simulator/scenario_simulator"]
+	path = src/simulator/scenario_simulator
+	url = https://github.com/tier4/scenario_simulator_v2.git
