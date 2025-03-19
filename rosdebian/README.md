@@ -30,6 +30,7 @@ Download this project and place this project directory to
 `~/autoware/rosdebian` directory. Now, launch the building script.
 
 ```sh
+git clone https://github.com/NEWSLabNTU/autoware-debian-packaging.git rosdebian
 cd rosdebian
 ./start.sh
 ```
