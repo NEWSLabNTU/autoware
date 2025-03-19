@@ -73,9 +73,6 @@
 [submodule "src/universe/external/muSSP"]
 	path = src/universe/external/muSSP
 	url = https://github.com/tier4/muSSP.git
-[submodule "src/universe/external/ndt_omp"]
-	path = src/universe/external/ndt_omp
-	url = https://github.com/tier4/ndt_omp.git
 [submodule "src/universe/external/pointcloud_to_laserscan"]
 	path = src/universe/external/pointcloud_to_laserscan
 	url = https://github.com/tier4/pointcloud_to_laserscan.git
