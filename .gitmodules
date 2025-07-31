@@ -54,7 +54,7 @@
 	url = https://github.com/MapIV/eagleye.git
 [submodule "src/universe/external/glog"]
 	path = src/universe/external/glog
-	url = https://github.com/tier4/glog.git
+	url = https://github.com/jerry73204/glog.git
 [submodule "src/universe/external/llh_converter"]
 	path = src/universe/external/llh_converter
 	url = https://github.com/MapIV/llh_converter.git
