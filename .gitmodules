@@ -27,7 +27,7 @@
 	url = https://github.com/autowarefoundation/autoware_launch.git
 [submodule "src/middleware/external/agnocast"]
 	path = src/middleware/external/agnocast
-	url = https://github.com/tier4/agnocast.git
+	url = https://github.com/jerry73204/agnocast.git
 [submodule "src/sensor_component/external/nebula"]
 	path = src/sensor_component/external/nebula
 	url = https://github.com/tier4/nebula.git
