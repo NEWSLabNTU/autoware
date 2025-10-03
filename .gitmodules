@@ -18,7 +18,7 @@
 	url = https://github.com/tier4/autoware_auto_msgs.git
 [submodule "src/autoware/universe/autoware.universe"]
 	path = src/autoware/universe/autoware.universe
-	url = git@github.com:NEWSLabNTU/autoware.universe.git
+	url = https://github.com/NEWSLabNTU/autoware.universe.git
 [submodule "src/autoware/universe/external/tier4_ad_api_adaptor"]
 	path = src/autoware/universe/external/tier4_ad_api_adaptor
 	url = https://github.com/tier4/tier4_ad_api_adaptor.git
@@ -48,7 +48,7 @@
 	url = https://github.com/MapIV/llh_converter.git
 [submodule "src/autoware/launcher/autoware_launch"]
 	path = src/autoware/launcher/autoware_launch
-	url = git@github.com:NEWSLabNTU/autoware_launch.git
+	url = https://github.com/NEWSLabNTU/autoware_launch.git
 [submodule "src/autoware/sensor_component/external/sensor_component_description"]
 	path = src/autoware/sensor_component/external/sensor_component_description
 	url = https://github.com/tier4/sensor_component_description.git
@@ -63,22 +63,22 @@
 	url = https://github.com/MapIV/transport_drivers.git
 [submodule "src/autoware/sensor_kit/sample_sensor_kit_launch"]
 	path = src/autoware/sensor_kit/sample_sensor_kit_launch
-	url = git@github.com:NEWSLabNTU/sample_sensor_kit_launch.git
+	url = https://github.com/NEWSLabNTU/sample_sensor_kit_launch.git
 [submodule "src/autoware/sensor_kit/external/awsim_sensor_kit_launch"]
 	path = src/autoware/sensor_kit/external/awsim_sensor_kit_launch
 	url = https://github.com/RobotecAI/awsim_sensor_kit_launch.git
 [submodule "src/autoware/vehicle/sample_vehicle_launch"]
 	path = src/autoware/vehicle/sample_vehicle_launch
-	url = git@github.com:NEWSLabNTU/sample_vehicle_launch.git
+	url = https://github.com/NEWSLabNTU/sample_vehicle_launch.git
 [submodule "src/autoware/param/autoware_individual_params"]
 	path = src/autoware/param/autoware_individual_params
-	url = git@github.com:NEWSLabNTU/autoware_individual_params.git
+	url = https://github.com/NEWSLabNTU/autoware_individual_params.git
 [submodule "src/autoware/middleware/external/heaphook"]
 	path = src/autoware/middleware/external/heaphook
 	url = https://github.com/tier4/heaphook.git
 [submodule "src/autoware/calibration_tools"]
 	path = src/autoware/calibration_tools
-	url = git@github.com:NEWSLabNTU/F1EIGHT_CalibrationTools.git
+	url = https://github.com/NEWSLabNTU/F1EIGHT_CalibrationTools.git
 	branch = Lab1
 [submodule "src/vendor/apriltag_msgs"]
 	path = src/vendor/apriltag_msgs
@@ -100,7 +100,7 @@
 	url = https://github.com/tier4/LiDARTag_msgs.git
 [submodule "src/autoware/sensor_component/external/lucid_vision_driver"]
 	path = src/autoware/sensor_component/external/lucid_vision_driver
-	url = git@github.com:NEWSLabNTU/lucid_vision_driver.git
+	url = https://github.com/NEWSLabNTU/lucid_vision_driver.git
 [submodule "src/autoware/sensor_component/external/ros2_socketcan"]
 	path = src/autoware/sensor_component/external/ros2_socketcan
 	url = https://github.com/autowarefoundation/ros2_socketcan.git
