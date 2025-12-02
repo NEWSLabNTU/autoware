@@ -1,0 +1,87 @@
+[submodule "src/core/autoware_adapi_msgs"]
+	path = src/core/autoware_adapi_msgs
+	url = https://github.com/autowarefoundation/autoware_adapi_msgs.git
+[submodule "src/core/autoware_cmake"]
+	path = src/core/autoware_cmake
+	url = https://github.com/autowarefoundation/autoware_cmake.git
+[submodule "src/core/autoware_core"]
+	path = src/core/autoware_core
+	url = https://github.com/autowarefoundation/autoware_core.git
+[submodule "src/core/autoware_internal_msgs"]
+	path = src/core/autoware_internal_msgs
+	url = https://github.com/autowarefoundation/autoware_internal_msgs.git
+[submodule "src/core/autoware_lanelet2_extension"]
+	path = src/core/autoware_lanelet2_extension
+	url = https://github.com/autowarefoundation/autoware_lanelet2_extension.git
+[submodule "src/core/autoware_msgs"]
+	path = src/core/autoware_msgs
+	url = https://github.com/autowarefoundation/autoware_msgs.git
+[submodule "src/core/autoware_rviz_plugins"]
+	path = src/core/autoware_rviz_plugins
+	url = https://github.com/autowarefoundation/autoware_rviz_plugins.git
+[submodule "src/core/autoware_utils"]
+	path = src/core/autoware_utils
+	url = https://github.com/autowarefoundation/autoware_utils.git
+[submodule "src/launcher/autoware_launch"]
+	path = src/launcher/autoware_launch
+	url = https://github.com/autowarefoundation/autoware_launch.git
+[submodule "src/middleware/external/agnocast"]
+	path = src/middleware/external/agnocast
+	url = https://github.com/tier4/agnocast.git
+[submodule "src/sensor_component/external/nebula"]
+	path = src/sensor_component/external/nebula
+	url = https://github.com/tier4/nebula.git
+[submodule "src/sensor_component/external/sensor_component_description"]
+	path = src/sensor_component/external/sensor_component_description
+	url = https://github.com/tier4/sensor_component_description.git
+[submodule "src/sensor_component/ros2_socketcan"]
+	path = src/sensor_component/ros2_socketcan
+	url = https://github.com/autowarefoundation/ros2_socketcan
+[submodule "src/sensor_component/transport_drivers"]
+	path = src/sensor_component/transport_drivers
+	url = https://github.com/autowarefoundation/transport_drivers
+[submodule "src/universe/autoware_universe"]
+	path = src/universe/autoware_universe
+	url = https://github.com/autowarefoundation/autoware_universe.git
+[submodule "src/universe/external/bevdet_vendor"]
+	path = src/universe/external/bevdet_vendor
+	url = https://github.com/autowarefoundation/bevdet_vendor.git
+[submodule "src/universe/external/cuda_blackboard"]
+	path = src/universe/external/cuda_blackboard
+	url = https://github.com/autowarefoundation/cuda_blackboard.git
+[submodule "src/universe/external/eagleye"]
+	path = src/universe/external/eagleye
+	url = https://github.com/MapIV/eagleye.git
+[submodule "src/universe/external/glog"]
+	path = src/universe/external/glog
+	url = https://github.com/tier4/glog.git
+[submodule "src/universe/external/llh_converter"]
+	path = src/universe/external/llh_converter
+	url = https://github.com/MapIV/llh_converter.git
+[submodule "src/universe/external/managed_transform_buffer"]
+	path = src/universe/external/managed_transform_buffer
+	url = https://github.com/autowarefoundation/managed_transform_buffer.git
+[submodule "src/universe/external/morai_msgs"]
+	path = src/universe/external/morai_msgs
+	url = https://github.com/MORAI-Autonomous/MORAI-ROS2_morai_msgs.git
+[submodule "src/universe/external/muSSP"]
+	path = src/universe/external/muSSP
+	url = https://github.com/tier4/muSSP.git
+[submodule "src/universe/external/negotiated"]
+	path = src/universe/external/negotiated
+	url = https://github.com/osrf/negotiated.git
+[submodule "src/universe/external/pointcloud_to_laserscan"]
+	path = src/universe/external/pointcloud_to_laserscan
+	url = https://github.com/tier4/pointcloud_to_laserscan.git
+[submodule "src/universe/external/rtklib_ros_bridge"]
+	path = src/universe/external/rtklib_ros_bridge
+	url = https://github.com/MapIV/rtklib_ros_bridge.git
+[submodule "src/universe/external/tier4_ad_api_adaptor"]
+	path = src/universe/external/tier4_ad_api_adaptor
+	url = https://github.com/tier4/tier4_ad_api_adaptor.git
+[submodule "src/universe/external/tier4_autoware_msgs"]
+	path = src/universe/external/tier4_autoware_msgs
+	url = https://github.com/tier4/tier4_autoware_msgs.git
+[submodule "src/universe/external/trt_batched_nms"]
+	path = src/universe/external/trt_batched_nms
+	url = https://github.com/autowarefoundation/trt_batched_nms.git
