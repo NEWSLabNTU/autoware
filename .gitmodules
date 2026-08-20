@@ -42,7 +42,7 @@
 	url = https://github.com/autowarefoundation/transport_drivers
 [submodule "src/universe/autoware_universe"]
 	path = src/universe/autoware_universe
-	url = https://github.com/autowarefoundation/autoware_universe.git
+	url = https://github.com/NEWSLabNTU/autoware_universe.git
 [submodule "src/universe/external/bevdet_vendor"]
 	path = src/universe/external/bevdet_vendor
 	url = https://github.com/autowarefoundation/bevdet_vendor.git
