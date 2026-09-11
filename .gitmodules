@@ -43,6 +43,7 @@
 [submodule "src/universe/autoware_universe"]
 	path = src/universe/autoware_universe
 	url = https://github.com/NEWSLabNTU/autoware_universe.git
+	branch = 1.5.0-patches
 [submodule "src/universe/external/bevdet_vendor"]
 	path = src/universe/external/bevdet_vendor
 	url = https://github.com/autowarefoundation/bevdet_vendor.git
