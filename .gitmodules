@@ -42,7 +42,7 @@
 	url = https://github.com/osrf/negotiated.git
 [submodule "src/launcher/autoware_launch"]
 	path = src/launcher/autoware_launch
-	url = https://github.com/autowarefoundation/autoware_launch.git
+	url = https://github.com/NEWSLabNTU/autoware_launch.git
 [submodule "src/sensor_component/external/nebula"]
 	path = src/sensor_component/external/nebula
 	url = https://github.com/tier4/nebula.git
